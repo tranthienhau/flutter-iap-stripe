@@ -1,0 +1,47 @@
+name: flutter_iap_stripe
+description: "Flutter IAP + Stripe Payment Integration POC - demonstrates in-app purchases, Apple Pay, Google Pay, and Stripe checkout."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # In-App Purchases (Apple IAP + Google Play Billing)
+  in_app_purchase: ^3.2.0
+
+  # Apple Pay / Google Pay
+  pay: ^2.0.0
+
+  # Stripe payment integration
+  flutter_stripe: ^11.4.0
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Local storage
+  shared_preferences: ^2.3.4
+
+  # HTTP client
+  http: ^1.2.2
+
+  # Date formatting
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
