@@ -1,17 +1,32 @@
 # flutter_iap_stripe
 
-A new Flutter project.
+A Flutter POC demonstrating production-ready payment integration: Apple IAP and Google Play Billing subscriptions, native Apple Pay / Google Pay wallets, and Stripe checkout, with receipt validation, purchase restoration, subscription management, and payment history. State is managed with Riverpod.
 
-## Getting Started
+## Demo
 
-This project is a starting point for a Flutter application.
+These are real screenshots captured from the running app on the iOS Simulator (not mockups). See [FLOW.md](FLOW.md) for exactly how they were generated.
 
-A few resources to get you started if this is your first Flutter project:
+| Home | Plans | Subscription | History |
+| --- | --- | --- | --- |
+| ![Home](screenshots/01-home.png) | ![Plans](screenshots/02-paywall.png) | ![Subscription](screenshots/03-subscription.png) | ![History](screenshots/04-history.png) |
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+![Demo](screenshots/demo.gif)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+- Apple IAP subscriptions via StoreKit 2 (`in_app_purchase`), monthly and yearly auto-renewable plans
+- Google Play Billing support (purchases, acknowledgment, subscription state)
+- Native Apple Pay / Google Pay one-tap checkout (`pay`)
+- Stripe PaymentSheet and custom card entry, server-side PaymentIntent flow (`flutter_stripe`)
+- Receipt validation and purchase restoration
+- Subscription management (upgrade, downgrade, cancel)
+- Payment history grouped by month with transaction detail sheets
+- Riverpod state management, multi-platform support
+
+## Stack
+
+- Flutter + Dart
+- Riverpod (state management)
+- in_app_purchase, pay, flutter_stripe
+- shared_preferences (local subscription/history store)
+- intl (date and price formatting)
